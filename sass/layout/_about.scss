@@ -26,13 +26,27 @@
     }
 
     &-technologies {
-      max-width: 300px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      row-gap: 1rem;
+      max-width: 600px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
 
-      & li i {
-        color: $color-purple;
+      & li  {
+        background-color: $color-purple;
+            color: $color-smoke-text;
+            padding: 0.75rem 1.5rem;
+            border-radius: 3px 3px 0 0;
+            position: relative;
+
+            &::after {
+              content: "";
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              height: 2px;
+              width: 100%;
+              background-color: darken($color-purple, 30%);
+            }
       }
     }
   }
