@@ -1,0 +1,82 @@
+.header {
+  position: relative;
+  padding-block: 10rem 6rem;
+  text-align: center;
+
+  @include breakpoint(tablet) {
+    padding-block: 10rem 6.5rem;
+  }
+
+  @include breakpoint(laptop) {
+    padding-block: 10rem 8rem;
+  }
+
+  &__deco {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    visibility: hidden;
+
+    @media (min-width: 581px) {
+      display: none;
+    }
+
+    &--desktop {
+      display: none;
+
+      @media (min-width: 581px) {
+        display: block;
+        max-width: 1440px;
+        margin-inline: auto;
+      }
+    }
+  }
+
+  &__title {
+    max-width: 990px;
+    margin-inline: auto;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+
+    &-text {
+      visibility: hidden;
+      display: inline-block;
+    }
+  }
+
+  &__text {
+    font-size: 1.125rem;
+    margin-bottom: 3rem;
+    overflow: hidden;
+
+    &-text {
+      visibility: hidden;
+      display: inline-block;
+    }
+
+    @include breakpoint(tablet) {
+      font-size: 1.25rem;
+    }
+
+    @include breakpoint(laptop) {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__svg {
+    width: fit-content;
+    margin-inline: auto;
+    overflow: hidden;
+
+    & img {
+      width: 190px;
+      visibility: hidden;
+
+      @media (min-width: 350px) {
+        width: 210px;
+      }
+    }
+  }
+}

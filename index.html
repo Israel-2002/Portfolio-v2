@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frontend Developer</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;500;600&family=Instrument+Serif&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- remix icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav class="nav">
+      <div class="nav__container container">
+        <a href="#" class="logo logo--mobile"><h5>Israel Dornor</h5></a>
+
+        <div class="hamburger">
+          <span class="one"></span>
+          <span class="two"></span>
+        </div>
+
+        <div class="nav__links-container">
+          <ul class="nav__links">
+            <li><a href="#about">about</a></li>
+            <li><a href="#projects">projects</a></li>
+            <li class="logo--desktop">
+              <h5 class="logo"><a href="#">Israel Dornor</a></h5>
+            </li>
+            <li><a href="#contact">contact</a></li>
+            <li>
+              <a href="https://v1-israel.vercel.app/" target="_blank"
+                >v1<i class="ri-arrow-right-up-line"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- header -->
+    <header class="header">
+      <img src="./assets/svg/Hero BG-mobile.svg" class="header__deco" />
+      <img
+        src="./assets/svg/Hero BG.svg"
+        class="header__deco header__deco--desktop"
+      />
+
+      <div class="header__container container">
+        <h1 class="header__title">
+          <span class="header__title-text gradient-text">
+            I craft solid and scalable frontend products with great user
+            interfaces and experiences.
+          </span>
+        </h1>
+        <p class="header__text">
+          <span class="header__text-text gradient-text">
+            Frontend Developer Based <br />
+            in Ghana.
+          </span>
+        </p>
+        <div class="header__svg">
+          <img src="./assets/svg/Status.svg" alt="" class="header__status" />
+        </div>
+      </div>
+    </header>
+
+    <!-- about -->
+    <section class="about" id="about">
+      <div class="about__container container">
+        <h1 class="about__title section-title">
+          <span class="about__title-text gradient-text">About me</span>
+        </h1>
+        <div class="about__description about__content">
+          <p>
+            Hello! I'm <span>Dornor Teye Israel</span>, a passionate frontend
+            developer on a mission to bring beautiful and user-friendly web
+            experiences to life. While my journey into the world of web
+            development began in <span>2022</span>, my dedication and enthusiasm
+            have propelled me forward, allowing me to quickly evolve and grow in
+            this ever-changing field.
+          </p>
+          <p>
+            My fascination with web development was ignited by the endless
+            possibilities it offers for creative expression and problem-solving.
+            Since my first lines of
+            <span>HTML and CSS</span>, I've been hooked, continuously exploring
+            new technologies and techniques to enhance my skills.
+          </p>
+          <p>
+            My primary focus is on creating <span>responsive</span>, accessible,
+            and visually appealing websites that not only meet but exceed user
+            expectations. I believe in the power of a
+            <span>well-crafted</span> user interface to engage and captivate
+            users, ensuring they have a seamless and enjoyable online
+            experience.
+          </p>
+          <p>
+            Here are a list of the <span>technologies</span> I've been working
+            with recently:
+          </p>
+
+          <ul class="about__description-technologies">
+            <li><i class="ri-arrow-right-s-fill"></i>Javascript</li>
+            <li><i class="ri-arrow-right-s-fill"></i>React</li>
+            <li><i class="ri-arrow-right-s-fill"></i>HTML</li>
+            <li><i class="ri-arrow-right-s-fill"></i>CSS</li>
+            <li><i class="ri-arrow-right-s-fill"></i>Sass</li>
+            <li><i class="ri-arrow-right-s-fill"></i>Figma</li>
+            <li><i class="ri-arrow-right-s-fill"></i>Git</li>
+            <li><i class="ri-arrow-right-s-fill"></i>Github</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- projects -->
+    <section class="projects" id="projects">
+      <div class="projects__container container">
+        <h1 class="projects__title section-title">
+          <span class="projects__title-text gradient-text">My projects</span>
+        </h1>
+
+        <ul class="projects__list projects__content">
+          <li class="projects__list-card">
+            <a href="https://hd-movies-site.vercel.app/" target="_blank">
+              <div class="projects__list-card-image">
+                <img src="./assets/images/movie-website.jpg" alt="" />
+              </div>
+
+              <div class="projects__list-card-details">
+                <h3>HD Movies <i class="ri-arrow-right-up-line"></i></h3>
+                <p>
+                  A movie website application, users can filter by genres,
+                  search and watch the latest movies or tv shows.
+                </p>
+                <div>
+                  <span>React</span>
+                  <span>Sass</span>
+                </div>
+              </div>
+            </a>
+          </li>
+
+          <li class="projects__list-card">
+            <a href="https://countries-app-project.vercel.app/" target="_blank">
+              <div class="projects__list-card-image">
+                <img src="./assets/images/countries-app.jpg" alt="" />
+              </div>
+
+              <div class="projects__list-card-details">
+                <h3>Rest Countries<i class="ri-arrow-right-up-line"></i></h3>
+                <p>
+                  A rest countries web application, where users can get to know
+                  useful information about every country in the world. Users can
+                  search, filter by region and even view neighbouring countries.
+                </p>
+                <div>
+                  <span>React</span>
+                  <span>Sass</span>
+                </div>
+              </div>
+            </a>
+          </li>
+
+          <li class="projects__list-card">
+            <a href="https://spend-in.vercel.app/" target="_blank">
+              <div class="projects__list-card-image">
+                <img src="./assets/images/spend-in.jpg" alt="" />
+              </div>
+
+              <div class="projects__list-card-details">
+                <h3>
+                  Spend.in landing page <i class="ri-arrow-right-up-line"></i>
+                </h3>
+                <p>
+                  A modern business management landing page for a fictional
+                  company.
+                </p>
+                <div>
+                  <span>HTML</span>
+                  <span>Sass</span>
+                  <span>Javascript</span>
+                </div>
+              </div>
+            </a>
+          </li>
+
+          <li class="projects__list-card">
+            <a
+              href="https://notes-app-project-website.vercel.app/"
+              target="_blank"
+            >
+              <div class="projects__list-card-image">
+                <img src="./assets/images/notes-app.jpeg" alt="" />
+              </div>
+
+              <div class="projects__list-card-details">
+                <h3>
+                  Notes application <i class="ri-arrow-right-up-line"></i>
+                </h3>
+                <p>
+                  This is a CRUD web application, users can create, read update
+                  and delete notes.
+                </p>
+                <div>
+                  <span>React</span>
+                  <span>CSS</span>
+                </div>
+              </div>
+            </a>
+          </li>
+
+          <li class="projects__list-card hidden-card hidden">
+            <a
+              href="https://space-tourism-website-project.vercel.app/"
+              target="_blank"
+            >
+              <div class="projects__list-card-image">
+                <img src="./assets/images/space-tourism.jpg" alt="" />
+              </div>
+
+              <div class="projects__list-card-details">
+                <h3>
+                  Space tourism website <i class="ri-arrow-right-up-line"></i>
+                </h3>
+                <p>This is a frontend mentor landing page challenge.</p>
+                <div>
+                  <span>React</span>
+                  <span>Sass</span>
+                </div>
+              </div>
+            </a>
+          </li>
+        </ul>
+
+        <button class="projects__btn">View more</button>
+      </div>
+    </section>
+
+    <!-- contact -->
+    <section class="contact" id="contact">
+      <div class="contact__container container">
+        <h1 class="contact__title section-title">
+          <span class="contact__title-text gradient-text">
+            Let's talk <br />
+            about your project
+          </span>
+        </h1>
+
+        <form class="contact__form contact__content">
+          <input type="hidden" name="contact_number" />
+          <input type="text" placeholder="Full Name" id="name" required />
+          <input type="email" placeholder="Email Address" id="email" required />
+          <textarea
+            cols="30"
+            rows="10"
+            placeholder="What's on your mind?"
+            id="message"
+            required
+          ></textarea>
+          <button type="submit" class="contact__btn">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="footer">
+      <img
+        src="./assets/svg/Footer BG-mobile.svg"
+        alt=""
+        class="footer__deco"
+      />
+      <img
+        src="./assets/svg/Footer BG.svg"
+        alt=""
+        class="footer__deco footer__deco--desktop"
+      />
+
+      <div class="footer__container container">
+        <ul class="footer__links">
+          <li>
+            <a href="https://github.com/Israel-2002" target="_blank"
+              ><i class="ri-github-line"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://twitter.com/Dreing16" target="_blank"
+              ><i class="ri-twitter-line"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://t.me/kiki1187" target="_blank"
+              ><i class="ri-telegram-line"></i
+            ></a>
+          </li>
+        </ul>
+        <p class="footer__text">
+          &copy;2023 Dornor Teye Israel <br />
+          All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <!-- javascript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script src="./javascript/script.js"></script>
+  </body>
+</html>

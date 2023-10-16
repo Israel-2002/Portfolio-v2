@@ -1,0 +1,57 @@
+.about {
+  &__title {
+    overflow: hidden;
+
+    & span {
+      display: inline-block;
+    }
+  }
+
+  
+  &__description {
+    max-width: 850px;
+    margin-inline: auto;
+    display: grid;
+    gap: 1.3rem;
+    margin-bottom: 2rem;
+
+    & p {
+      & span {
+        color: $color-purple;
+      }
+
+      @include breakpoint(tablet) {
+        font-size: 1.125rem;
+      }
+    }
+
+    &-technologies {
+      max-width: 300px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      row-gap: 1rem;
+
+      & li i {
+        color: $color-purple;
+      }
+    }
+  }
+
+  &__image {
+    max-width: 300px;
+
+    @media (min-width: 800px) {
+      max-width: 280px;
+    }
+
+    & img {
+      filter: grayscale(1);
+      display: block;
+      border-radius: 6px;
+
+      &:hover {
+        filter: grayscale(0);
+      }
+    }
+  }
+}

@@ -1,0 +1,152 @@
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5rem;
+  display: grid;
+  place-items: center;
+  z-index: 999;
+  visibility: hidden;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & .logo {
+      font-size: 1.5rem;
+      color: $color-smoke-text;
+
+      & a {
+        font-size: inherit;
+      }
+
+      &--mobile {
+        @include breakpoint(tablet) {
+          display: none;
+        }
+      }
+
+      &--desktop {
+        display: none;
+
+        @include breakpoint(tablet) {
+          display: inline-block;
+        }
+      }
+    }
+
+    & .hamburger {
+      display: grid;
+      gap: 0.3rem;
+      position: relative;
+      z-index: 999;
+
+      @include breakpoint(tablet) {
+        display: none;
+      }
+
+      & .one,
+      .two {
+        width: 30px;
+        height: 1px;
+        display: inline-block;
+        background-color: $color-smoke-text;
+      }
+    }
+  }
+
+  &__links-container {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background-color: $color-purple;
+    color: white;
+    transition: 300ms ease-in-out;
+    display: grid;
+    place-items: center;
+
+    @include breakpoint(tablet) {
+      position: static;
+      width: 100%;
+      height: auto;
+      background-color: transparent;
+    }
+  }
+
+  &__links {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+
+    @include breakpoint(tablet) {
+      flex-direction: row;
+      align-items: center;
+      width: 100%;
+      justify-content: space-between;
+    }
+
+    & li {
+      overflow: hidden;
+
+      & a {
+        color: $color-smoke-text;
+        font-size: 1.5rem;
+        font-weight: 400;
+        position: relative;
+
+        &:hover::after {
+          transform: translateX(0);
+          transition: 300ms ease-in-out;
+        }
+
+        &::after {
+          @include breakpoint(laptop) {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: $color-smoke-text;
+            transform: translateX(-101%);
+          }
+        }
+
+        @include breakpoint(tablet) {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
+
+.nav.blurred {
+  background: rgba($color-bg, 0.1);
+  backdrop-filter: blur(1rem);
+}
+
+.hamburger.openNavLinks {
+  gap: 0;
+}
+
+.one.openNavLinks {
+  transform: rotate(45deg);
+}
+
+.two.openNavLinks {
+  transform: rotate(-45deg);
+}
+
+.nav__links-container.openNavLinks {
+  right: 0;
+}
+
+.nav__links li a.mouseleave::after {
+  transform: translateX(100%);
+  transition: 300ms ease-in-out;
+}

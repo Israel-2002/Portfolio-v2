@@ -1,0 +1,46 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  background-color: $color-bg;
+  color: $color-smoke-text;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  object-position: center;
+  object-fit: cover;
+}
+
+a {
+  color: inherit;
+}
+
+p {
+  line-height: 1.5;
+}
+
+section {
+  padding-bottom: 6rem;
+
+  @include breakpoint(tablet) {
+    padding-bottom: 6.5rem;
+  }
+
+  @include breakpoint(laptop) {
+    padding-bottom: 8rem;
+  }
+}

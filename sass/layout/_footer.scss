@@ -1,0 +1,64 @@
+.footer {
+  position: relative;
+  padding-bottom: 4rem;
+  
+  &__container {
+    visibility: hidden;
+  }
+
+  &__deco {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    visibility: hidden;
+
+    @media (min-width: 581px) {
+      display: none;
+    }
+
+    &--desktop {
+      display: none;
+
+      @media (min-width: 581px) {
+        display: block;
+        max-width: 1440px;
+        margin-inline: auto;
+      }
+    }
+  }
+
+  &__links {
+    position: relative;
+    z-index: 10;
+    max-width: 400px;
+    margin-inline: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin-bottom: 2.5rem;
+
+    @include breakpoint(laptop) {
+      gap: 4rem;
+    }
+
+    & li a i {
+      font-size: 2.3rem;
+      color: $color-smoke-text;
+
+      @media (min-width: 350px) {
+        font-size: 2.7rem;
+      }
+    }
+  }
+
+  &__text {
+    font-size: clamp(1rem, 0.9167rem + 0.4167vw, 1.25rem);
+    text-align: center;
+    color: $color-smoke-text;
+    position: relative;
+    z-index: 10;
+  }
+}

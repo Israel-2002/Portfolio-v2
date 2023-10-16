@@ -1,0 +1,56 @@
+.contact {
+  &__title {
+    max-width: 650px;
+    margin-inline: auto;
+    overflow: hidden;
+
+    & span {
+      display: inline-block;
+    }
+  }
+
+  &__form {
+    display: grid;
+    gap: 1rem;
+    max-width: 462px;
+    margin-inline: auto;
+    visibility: hidden;
+
+    & input,
+    textarea {
+      border-radius: 6px;
+      padding: 0.875rem 1rem;
+      border: 0;
+      background-color: #222327;
+      color: $color-smoke-text;
+      font-size: 1rem;
+
+      &::placeholder {
+        color: $color-smoke-text;
+      }
+    }
+
+    & button {
+      font-size: 1rem;
+      padding-block: 1.75rem;
+      border: 1px solid $color-smoke-text;
+      border-radius: 6px;
+      background-color: transparent;
+      color: #d4dce8;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $color-smoke-text;
+        color: $color-bg;
+      }
+    }
+  }
+}
+
+.contact__btn.color {
+  color: #d4dce8;
+}
+
+.contact__btn.color-green {
+  color: rgb(15, 207, 15);
+}
