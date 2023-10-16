@@ -74,7 +74,7 @@
       width: 190px;
       visibility: hidden;
 
-      @media (min-width: 350px) {
+      @include breakpoint(tablet) {
         width: 210px;
       }
     }
