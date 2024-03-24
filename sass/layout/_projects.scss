@@ -44,6 +44,8 @@
       & a {
         display: block;
         height: 100%;
+        display: flex;
+        flex-direction: column;
       }
 
       &-details {
@@ -69,30 +71,31 @@
             margin-bottom: 1.3rem;
           }
         }
+      }
 
-        & div {
-          display: flex;
-          align-items: center;
-          flex-wrap: wrap;
-          gap: 1rem;
+      &-technologies {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin-top: auto;
+
+        & span {
+          background-color: $color-purple;
+          color: $color-smoke-text;
+          padding: 0.75rem 1.5rem;
+          border-radius: 3px 3px 0 0;
+          position: relative;
           margin-top: auto;
 
-          & span {
-            background-color: $color-purple;
-            color: $color-smoke-text;
-            padding: 0.75rem 1.5rem;
-            border-radius: 3px 3px 0 0;
-            position: relative;
-
-            &::after {
-              content: "";
-              position: absolute;
-              bottom: 0;
-              left: 0;
-              height: 2px;
-              width: 100%;
-              background-color: darken($color-purple, 30%);
-            }
+          &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 2px;
+            width: 100%;
+            background-color: darken($color-purple, 30%);
           }
         }
       }

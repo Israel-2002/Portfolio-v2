@@ -423,6 +423,8 @@ p {
 .projects__list-card a {
   display: block;
   height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 .projects__list-card-details {
   color: #d4dce8;
@@ -448,21 +450,22 @@ p {
     margin-bottom: 1.3rem;
   }
 }
-.projects__list-card-details div {
+.projects__list-card-technologies {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   gap: 1rem;
   margin-top: auto;
 }
-.projects__list-card-details div span {
+.projects__list-card-technologies span {
   background-color: #9742ff;
   color: #d4dce8;
   padding: 0.75rem 1.5rem;
   border-radius: 3px 3px 0 0;
   position: relative;
+  margin-top: auto;
 }
-.projects__list-card-details div span::after {
+.projects__list-card-technologies span::after {
   content: "";
   position: absolute;
   bottom: 0;
